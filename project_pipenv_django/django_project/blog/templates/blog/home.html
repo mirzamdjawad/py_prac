@@ -3,9 +3,20 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+
+	{% if title %}
+		<title> Django Blog- {{ title }}</title>
+	{% elseif%}
+		<title> Django Blog- </title>
+	{% endif %}
 </head>
 <body>
+
+	{% for i in posts %}
+		<h1>{% i.title %}</h1>
+
+	{% end for %}
 		<h1> Jawad Django Project Home Page</h1>
+	}
 </body>
 </html>
