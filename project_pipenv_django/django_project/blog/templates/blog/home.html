@@ -1,22 +1,17 @@
-<<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+{% extends "blog/base.html"%}
+{%block content%}
+<article class="media content-section">
+  <div class="media-body">
+    <div class="article-metadata">
+      <a class="mr-2" href="#">{{ post.author }}</a>
+      <small class="text-muted">{{ post.date_posted }}</small>
+    </div>
+    <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
+    <p class="article-content">{{ post.content }}</p>
+  </div>
+</article>
+{%endblock%}
+		
 
-	{% if title %}
-		<title> Django Blog- {{ title }}</title>
-	{% elseif%}
-		<title> Django Blog- </title>
-	{% endif %}
-</head>
-<body>
+	
 
-	{% for i in posts %}
-		<h1>{% i.title %}</h1>
-
-	{% end for %}
-		<h1> Jawad Django Project Home Page</h1>
-	}
-</body>
-</html>
